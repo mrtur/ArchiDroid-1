@@ -20,23 +20,23 @@
 # limitations under the License.
 
 # Call animated splash ASAP to notify user that everything is alright
-ini_set("transition_frame", "30");
+ini_set("force_colorspace","rgba");
+ini_set("transition_frame", "5");
 anisplash(1, "preview/bootanimation/archi3", 2000);
 
 # Device information
 writetmpfile(
 	"device.prop",
 
-	"name=BRINGUP\n"+
+	"name=Nexus 4\n"+
 	"dpi=320\n"+
-	"kernel=BRINGUP\n"+ # CORE
-	"recovery=BRINGUP\n"+ # CORE
-	"modem=BRINGUP\n"+ # CORE
-	"system=BRINGUP\n"+
-	"data=BRINGUP\n"+
-	"cache=BRINGUP\n"+
-	"preload=BRINGUP\n"+
-	"extsd=BRINGUP\n"
+	"kernel=/dev/block/platform/msm_sdcc.1/by-name/BOOT\n"+ # CORE
+	"recovery=/dev/block/platform/msm_sdcc.1/by-name/RECOVERY\n"+ # CORE
+	"modem=/dev/block/platform/msm_sdcc.1/by-name/RADIO\n"+ # CORE
+	"system=/dev/block/platform/msm_sdcc.1/by-name/SYSTEM\n"+
+	"data=/dev/block/platform/msm_sdcc.1/by-name/USERDATA\n"+
+	"cache=/dev/block/platform/msm_sdcc.1/by-name/CACHE\n"+
+	"preload=/dev/block/platform/msm_sdcc.1/by-name/HIDDEN\n"
 );
 
 # Often edited settings
@@ -45,8 +45,8 @@ ini_set("rom_date", "October XXth, 2014");
 
 # Settings
 theme("archidroid");
-ini_set("rom_name", "ArchiDroid");
-ini_set("rom_author", "JustArchi");
+ini_set("rom_name", "MrturDroid");
+ini_set("rom_author", "mrtur");
 ini_set("rom_device", file_getprop("/tmp/aroma-data/device.prop","name"));
 
 fontresload( "0", "ttf/DroidSans.ttf;ttf/DroidSansFallback.ttf;ttf/DroidSansArabic.ttf;", "12" ); #-- Use sets of font (Font Family)
@@ -301,10 +301,6 @@ if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop","preset") == "custo
 		"stock","Stock","<~archidroid.kernel.stock.desc>","select.selected",
 
 		"dpi","<#selectbg_g>DPI</#>","","group",
-		"80","80","","select",
-		"120","120","","select",
-		"160","160","","select",
-		"200","200","","select",
 		"240","240","","select.selected",
 		"280","280","","select",
 		"320","320","","select",
