@@ -40,13 +40,12 @@ writetmpfile(
 	"name=Nexus4\n"+
 	"maintainer=mrtur\n"+
 	"density=320\n"+
-	"kernel=/dev/block/platform/msm_sdcc.1/by-name/BOOT\n"+ # CORE
-	"recovery=/dev/block/platform/msm_sdcc.1/by-name/RECOVERY\n"+ # CORE
-	"modem=/dev/block/platform/msm_sdcc.1/by-name/RADIO\n"+ # CORE
-	"system=/dev/block/platform/msm_sdcc.1/by-name/SYSTEM\n"+
-	"data=/dev/block/platform/msm_sdcc.1/by-name/USERDATA\n"+
-	"cache=/dev/block/platform/msm_sdcc.1/by-name/CACHE\n"+
-	"preload=/dev/block/platform/msm_sdcc.1/by-name/HIDDEN\n"
+	"kernel=/dev/block/platform/msm_sdcc.1/by-name/boot\n"+ # CORE
+	"recovery=/dev/block/platform/msm_sdcc.1/by-name/recovery\n"+ # CORE
+	"modem=/dev/block/platform/msm_sdcc.1/by-name/modem\n"+ # CORE
+	"system=/dev/block/platform/msm_sdcc.1/by-name/system\n"+
+	"data=/dev/block/platform/msm_sdcc.1/by-name/userdata\n"+
+	"cache=/dev/block/platform/msm_sdcc.1/by-name/cache\n"
 
 );
 
