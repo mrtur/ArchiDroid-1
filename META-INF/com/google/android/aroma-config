@@ -22,7 +22,7 @@
 # Call animated splash ASAP to notify user that everything is alright
 
 ini_set("force_colorspace","rgba");
-#ini_set("transition_frame", "30");
+ini_set("transition_frame", "5");
 anisplash(
 	#-- Number of loops
 	1,
@@ -134,7 +134,7 @@ viewbox(
 	"@welcome"
 );
 
-ini_set("transition_frame", "30"); # AROMA overrides this variable on first menu for some reason
+ini_set("transition_frame", "0"); # AROMA overrides this variable on first menu for some reason
 
 form(
 	"ArchiDroid Language",
