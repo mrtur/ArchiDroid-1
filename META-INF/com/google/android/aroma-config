@@ -19,24 +19,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Call animated splash ASAP to notify user that everything is alright
-
-ini_set("force_colorspace","rgba");
-ini_set("transition_frame", "5");
-anisplash(
-	#-- Number of loops
-	1,
-
-	#-- Image, duration in milliseconds
-	"preview/bootanimation/archi3", 2000
-);
-
 # Device information
 writetmpfile(
 	"device.prop",
 
 	"name=Nexus4\n"+
 	"maintainer=mrtur\n"+
+	"colorspace=rgba\n"+ # Possible values: "auto", "rgba", "abgr", "argb", "bgra". Use "rgba" if AROMA swaps red and blue colors on your device
 	"density=320\n"+
 	"kernel=/dev/block/platform/msm_sdcc.1/by-name/boot\n"+ # CORE
 	"recovery=/dev/block/platform/msm_sdcc.1/by-name/recovery\n"+ # CORE, "NULL" indicates kernel + recovery combo
@@ -44,7 +33,21 @@ writetmpfile(
 	"system=/dev/block/platform/msm_sdcc.1/by-name/system\n"+
 	"data=/dev/block/platform/msm_sdcc.1/by-name/userdata\n"+
 	"cache=/dev/block/platform/msm_sdcc.1/by-name/cache\n"
+);
 
+setvar("colorspace", file_getprop("/tmp/aroma-data/device.prop", "colorspace"));
+if getvar("colorspace") != "auto" then
+	ini_set("force_colorspace", getvar("colorspace"));
+endif;
+
+# Call animated splash ASAP to notify user that everything is alright
+ini_set("transition_frame", "5");
+anisplash(
+	#-- Number of loops
+	1,
+
+	#-- Image, duration in milliseconds
+	"preview/bootanimation/archi3", 2000
 );
 
 # Often edited settings
