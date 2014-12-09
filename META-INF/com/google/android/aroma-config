@@ -63,17 +63,6 @@ ini_set("rom_author", file_getprop("/tmp/aroma-data/device.prop", "maintainer"))
 fontresload("0", "ttf/Roboto-Regular.ttf;ttf/NotoSansHebrew-Regular.ttf", "12" ); #-- Use sets of font (Font Family)
 fontresload("1", "ttf/Roboto-Regular.ttf;ttf/NotoSansHebrew-Regular.ttf", "14" ); #-- Use sets of font (Font Family)
 
-setvar("density", file_getprop("/tmp/aroma-data/device.prop", "density"));
-if getvar("density") == "320" then
-	ini_set("dp", "3");
-endif;
-if getvar("density") == "240" then
-	ini_set("dp", "2");
-endif;
-if getvar("density") == "160" then
-	ini_set("dp", "1");
-endif;
-
 # Parse common variables
 ziptotmp("system/build.prop", "archidroid.prop");
 
@@ -118,12 +107,12 @@ viewbox(
 	#-- Text
 	"Hello master, root@ArchiDroid here. You are about to install <b>ArchiDroid</b> for your device.\n\n\n\n\n\n\n\n"+
 
-	"<#selectbg_g>Device:\t\t\t</#><b><#3D5AFE>" + getvar("archidroid_device") + " (" + ini_get("rom_device") + ")" + "</#></b>\n"+
-	"<#selectbg_g>Base:\t\t\t</#><b><#3D5AFE>" + getvar("archidroid_rom") + "</#></b>\n"+
-	"<#selectbg_g>Version:\t\t\t</#><b><#3D5AFE>" + getvar("archidroid_version") + "</#></b>\n"+
-	"<#selectbg_g>Android:\t\t\t</#><b><#3D5AFE>" + getvar("archidroid_version_android") + " (" + getvar("archidroid_version_android_number") + ")" + "</#></b>\n"+
-	"<#selectbg_g>Type:\t\t\t</#><b><#3D5AFE>" + getvar("archidroid_version_type") + "</#></b>\n"+
-	"<#selectbg_g>Released:\t\t</#><b><#3D5AFE>" + ini_get("rom_date") + "</#></b>\n\n"+
+	"<#selectbg_g>Device:          </#><b><#3D5AFE>" + getvar("archidroid_device") + " (" + ini_get("rom_device") + ")" + "</#></b>\n"+
+	"<#selectbg_g>Base:            </#><b><#3D5AFE>" + getvar("archidroid_rom") + "</#></b>\n"+
+	"<#selectbg_g>Version:         </#><b><#3D5AFE>" + getvar("archidroid_version") + "</#></b>\n"+
+	"<#selectbg_g>Android:         </#><b><#3D5AFE>" + getvar("archidroid_version_android") + " (" + getvar("archidroid_version_android_number") + ")" + "</#></b>\n"+
+	"<#selectbg_g>Type:            </#><b><#3D5AFE>" + getvar("archidroid_version_type") + "</#></b>\n"+
+	"<#selectbg_g>Released:        </#><b><#3D5AFE>" + ini_get("rom_date") + "</#></b>\n\n"+
 
 	"<#selectbg_g>Press <b>Next</b> to continue the installation</#>",
 
@@ -321,13 +310,18 @@ if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop", "preset") == "cust
 		"stock", "Stock", "<~archidroid.kernel.stock.desc>", "select.selected",
 
 		"density", "<#selectbg_g><~archidroid.common.density></#>", "", "group",
-		#"80", "80", "", "select",
-		#"120", "120", "", "select",
-		#"160", "160", "", "select",
-		#"200", "200", "", "select",
-		"240", "240", "", "select.selected",
+		"80", "80", "", "select",
+		"120", "120", "", "select",
+		"160", "160", "", "select",
+		"200", "200", "", "select",
+		"240", "240", "", "select",
 		"280", "280", "", "select",
-		"320", "320", "<~archidroid.common.default>", "select",
+		"320", "320", "", "select",
+		"360", "360", "", "select",
+		"400", "400", "", "select",
+		"440", "440", "", "select",
+		"480", "480", "", "select",
+		"default", "Stock", "<~archidroid.common.default>", "select.selected",
 
 		"keyboard", "<#selectbg_g><~archidroid.keyboard></#>", "", "group",
 		"google", "Google", "<~archidroid.keyboard.google.desc>", "select.selected",
