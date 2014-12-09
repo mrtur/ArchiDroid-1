@@ -26,7 +26,6 @@ writetmpfile(
 	"name=Nexus4\n"+
 	"maintainer=mrtur\n"+
 	"colorspace=rgba\n"+ # Possible values: "auto", "rgba", "abgr", "argb", "bgra". Use "rgba" if AROMA swaps red and blue colors on your device
-	"density=320\n"+
 	"kernel=/dev/block/platform/msm_sdcc.1/by-name/boot\n"+ # CORE
 	"recovery=/dev/block/platform/msm_sdcc.1/by-name/recovery\n"+ # CORE, "NULL" indicates kernel + recovery combo
 	"modem=/dev/block/platform/msm_sdcc.1/by-name/modem\n"+ # CORE
