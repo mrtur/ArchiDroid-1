@@ -39,6 +39,10 @@ if getvar("colorspace") != "auto" then
 	ini_set("force_colorspace", getvar("colorspace"));
 endif;
 
+if cmp(ini_get("dp"), ">", "3") then
+	ini_set("dp","3");
+endif;
+
 # Call animated splash ASAP to notify user that everything is alright
 ini_set("transition_frame", "5");
 anisplash(
@@ -367,7 +371,7 @@ if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop", "preset") == "cust
 		"xposed-xprivacy", "XPrivacy", "<~archidroid.xposed.xprivacy.desc>", "check",
 
 		"archiapps", "<#selectbg_g>ArchiDroid Apps</#>", "", "group",
-		"adaway", "AdAway", "<~archidroid.apps.adaway.desc>", "check.checked",
+		"adaway", "AdAway", "<~archidroid.apps.adaway.desc>", "check",
 		"cooltool", "CoolTool", "<~archidroid.apps.cooltool.desc>", "check.checked",
 		"esfileexplorer", "ES File Explorer", "<~archidroid.apps.esfileexplorer.desc>", "check.checked",
 		"fdroid", "F-Droid", "<~archidroid.apps.fdroid.desc>", "check.checked",
@@ -379,6 +383,7 @@ if file_getprop("/tmp/aroma-data/archidroidinstallmode.prop", "preset") == "cust
 
 		"architweaks", "<#selectbg_g>ArchiDroid Tweaks</#>", "", "group",
 		"navibar", "<~archidroid.tweaks.navibar>", "<~archidroid.tweaks.navibar.desc>", "check",
+		"navibar-hwenabled", "<~archidroid.tweaks.navibar.hwenabled>", "<~archidroid.tweaks.navibar.hwenabled.desc>", "check",
 		"cell", "<~archidroid.tweaks.cellbroadcasts>", "<~archidroid.tweaks.cellbroadcasts.desc>", "check"
 	);
 	if file_getprop("/tmp/aroma-data/archidroid.prop", "bootanimation-preview") == "1" then
