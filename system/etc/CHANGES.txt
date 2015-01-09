@@ -1,149 +1,191 @@
 ===================================
-Since Sat Nov 29 05:11:36 UTC 2014
+Since Sun Jan  4 22:51:39 UTC 2015
 ===================================
+
+   * build
+560046c envsetup: Add /vendor/lib/hw to shared lib search path
 
    * vendor/cm
-5ea29e0 otasigcheck: skip otasigcheck in headless mode
-86eda71 Update Japanese APNs
+d87e40d CM Legal - use https
 
 ===================================
-Since Thu Nov 27 23:24:41 UTC 2014
-===================================
-
-   * frameworks/base
-347951e BackupMangerService: Pass result code in non-interactive calls
-08b30a3 BackupManagerService: Unbreak "adb restore"
-3b18446 Automatic translation import
-
-   * packages/apps/Settings
-c3f9c96 Automatic translation import
-
-===================================
-Since Wed Nov 26 20:50:18 UTC 2014
+Since Sat Jan  3 15:02:51 UTC 2015
 ===================================
 
    * external/koush/Superuser
-3a6d5c9 Automatic translation import
+392c152 Automatic translation import
 
    * external/whispersystems/WhisperPush
-111512a Automatic translation import
+9a66aab Automatic translation import
 
    * frameworks/base
-7b91a91 LockscreenInterface from ToggleLockscreenTile (Part 2 of 2)
-
-   * packages/apps/Apollo
-98e661f Automatic translation import
-
-   * packages/apps/Bluetooth
-4f1f657 Automatic translation import
-
-   * packages/apps/CMAccount
-b89ee40 Automatic translation import
-
-   * packages/apps/CMBugReport
-a844865 Automatic translation import
-
-   * packages/apps/CMFileManager
-f804e36 Automatic translation import
-
-   * packages/apps/CMUpdater
-5e418d0 Automatic translation import
-
-   * packages/apps/Calculator
-8d1acdb Automatic translation import
-
-   * packages/apps/Calendar
-c01890f Automatic translation import
-
-   * packages/apps/Camera2
-e2deb48 Automatic translation import
-
-   * packages/apps/CellBroadcastReceiver
-57b609a Automatic translation import
-
-   * packages/apps/Contacts
-b9dd05e Automatic translation import
-
-   * packages/apps/ContactsCommon
-b9279fe Automatic translation import
-
-   * packages/apps/DSPManager
-2635595 Automatic translation import
-
-   * packages/apps/DeskClock
-aceea62 Automatic translation import
-
-   * packages/apps/Dialer
-0e715d9 Automatic translation import
-
-   * packages/apps/Email
-c73f073 Automatic translation import
-
-   * packages/apps/Gallery2
-0bf6ac9 Automatic translation import
-
-   * packages/apps/InCallUI
-e11ea97 Automatic translation import
-
-   * packages/apps/LockClock
-f520beb Automatic translation import
-
-   * packages/apps/Mms
-945b28b Automatic translation import
-
-   * packages/apps/Settings
-5bb8835 LockscreenInterface from ToggleLockscreenTile (Part 1 of 2)
-
-   * packages/apps/SoundRecorder
-4dcd704 Automatic translation import
-
-   * packages/apps/Stk
-4d91b81 Automatic translation import
-
-   * packages/apps/Torch
-954c77e Automatic translation import
-
-   * packages/apps/UnifiedEmail
-ee2ba37 Automatic translation import
-
-   * packages/inputmethods/LatinIME
-3740978 Automatic translation import
-
-   * packages/providers/ContactsProvider
-e0be61c Automatic translation import
-
-   * packages/services/Telephony
-83e0edf Automatic translation import
-
-   * vendor/cm
-e4704d9 Update Reliance APNs
-
-===================================
-Since Tue Nov 25 17:44:38 UTC 2014
-===================================
-
-   * device/lge/mako
-e76392f Removing unused legacy configuration file
-
-   * frameworks/base
-2580a5e Disabling "Charging sounds" should prevent wireless sound as well
-
-   * packages/apps/Settings
-2fc6705 Make "stay awake" also work for wireless charging
-
-   * packages/apps/Trebuchet
-3e6500c Delay reloading Dynamic grid after size change till onResume or settings panel collapses
-
-===================================
-Since Mon Nov 24 14:48:46 UTC 2014
-===================================
-
-   * frameworks/av
-b9df80e libstagefright: Make timed text for audio only files work on start
+f2f70e6 Automatic translation import
 
    * frameworks/opt/telephony
-1554a17 Telephony: Fall back on deprecated createFromPdu.
+c28cc87 RIL: Allow RILReceiver to be overriden
 
-   * system/core
-4e15002 init: Increase the buffer for /proc/cpuinfo for ocata cores.
+   * packages/apps/Apollo
+c9ce463 Automatic translation import
+
+   * packages/apps/Bluetooth
+1ed50c9 Automatic translation import
+
+   * packages/apps/BluetoothExt
+892dcb9 Automatic translation import
+
+   * packages/apps/Browser
+a4fac56 Automatic translation import
+
+   * packages/apps/CMAccount
+9a196c4 Automatic translation import
+
+   * packages/apps/CMBugReport
+8b59b3d Automatic translation import
+
+   * packages/apps/CMFileManager
+4f63293 CMFM: NL translations
+19a1097 Automatic translation import
+
+   * packages/apps/CMHome
+96f4678 Automatic translation import
+
+   * packages/apps/CMUpdater
+44433db Automatic translation import
+
+   * packages/apps/CMWallpapers
+2e2d92f Automatic translation import
+
+   * packages/apps/Calculator
+a8c5262 Automatic translation import
+
+   * packages/apps/Calendar
+169d540 Fix a string for crowdin
+499349f Automatic translation import
+
+   * packages/apps/Camera2
+cc558ec Automatic translation import
+
+   * packages/apps/CellBroadcastReceiver
+48c5526 Automatic translation import
+
+   * packages/apps/CertInstaller
+57b448e Automatic translation import
+
+   * packages/apps/Contacts
+4dc33cf Automatic translation import
+
+   * packages/apps/ContactsCommon
+af9d54a Automatic translation import
+
+   * packages/apps/DSPManager
+5975435 Automatic translation import
+
+   * packages/apps/DeskClock
+1ce5b2c Automatic translation import
+
+   * packages/apps/Dialer
+795df40 Automatic translation import
+
+   * packages/apps/Email
+ebbe600 Automatic translation import
+
+   * packages/apps/Gallery2
+290db1f Automatic translation import
+
+   * packages/apps/InCallUI
+a6deaa2 Automatic translation import
+
+   * packages/apps/KeyChain
+900e9c6 Automatic translation import
+
+   * packages/apps/LockClock
+50967e2 Automatic translation import
+
+   * packages/apps/Mms
+85b869a Automatic translation import
+
+   * packages/apps/Nfc
+8782f69 Automatic translation import
+
+   * packages/apps/Settings
+4e48d3f Automatic translation import
+
+   * packages/apps/SoundRecorder
+07b913a Automatic translation import
+
+   * packages/apps/Stk
+0274c39 Automatic translation import
+
+   * packages/apps/ThemeChooser
+297fa3d Automatic translation import
+
+   * packages/apps/Torch
+df6461a Automatic translation import
+
+   * packages/apps/Trebuchet
+866350d Automatic translation import
+
+   * packages/apps/UnifiedEmail
+b77cd7d Automatic translation import
+
+   * packages/apps/VideoEditor
+ff89709 Automatic translation import
+
+   * packages/apps/VoicePlus
+943a073 Automatic translation import
+
+   * packages/inputmethods/LatinIME
+bf56153 Automatic translation import
+
+   * packages/providers/CalendarProvider
+39634b6 Automatic translation import
+
+   * packages/providers/ContactsProvider
+f605e34 Automatic translation import
+
+   * packages/providers/DownloadProvider
+e7a8218 Automatic translation import
+
+   * packages/providers/ThemesProvider
+7ccb630 Automatic translation import
+
+   * packages/providers/UserDictionaryProvider
+57e9407 Automatic translation import
+
+   * packages/services/Telephony
+f39a035 Automatic translation import
+
+   * packages/wallpapers/Galaxy4
+4ca595c Automatic translation import
+
+   * packages/wallpapers/PhaseBeam
+a0b70d8 Automatic translation import
+
+   * packages/wallpapers/PhotoPhase
+6565694 Automatic translation import
+
+   * vendor/cm
+c3fbc9d Add Google Android One contributor
+5c5a2e8 Allow vendor/cyngn overlays to override vendor/cm overlays
+
+===================================
+Since Thu Jan  1 03:29:15 UTC 2015
+===================================
+
+   * frameworks/base
+b793cb4 frameworks: disable loading notification groups in System profiles
+
+===================================
+Since Tue Dec 30 14:55:24 UTC 2014
+===================================
+
+   * frameworks/opt/telephony
+29b19bf Telephony: If no wrapped message, originating address is null
+
+===================================
+Since Wed Dec 24 18:01:32 UTC 2014
+===================================
+
+   * vendor/cm
+b28ca70 apn: fix some data issues when using sprint operator numerics.
 
